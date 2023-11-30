@@ -1,11 +1,12 @@
 import Image from "next/image";
 import azarbaijanData from "../data";
+import Hero from "@/Components/Hero";
 const Home = () => {
   return (
     <main>
-      <div>hello i am using next js</div>
+      <Hero/>
+      <div className="flex justify-center items-center">hello i am using next js</div>
       {azarbaijanData.name}
-      fgsdf
     </main>
   );
 };

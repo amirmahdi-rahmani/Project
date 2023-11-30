@@ -3,6 +3,116 @@
 @tailwind utilities;
 
 
-body {
- 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+ul li a{
+    font-size: 22px;
+    color: whitesmoke;
+    
+}
+
+body , html {
+    overflow-x: hidden;
+}
+ul li a:hover{
+    color: white;
+    
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.ctn {
+    padding: 8px 15px;
+    background:#fc036b;
+    border-radius: 30px;
+    color:whitesmoke
+}
+h4 {
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+p {
+    color: #7c7c7c; 
+    padding: 0 40px;
+}
+/* -------------------------------------- Global -------------------------------------- */
+
+/* -------------------------------------- Navbar -------------------------------------- */
+
+
+.navbar {
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+    padding: 20px;
+    color: red;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li {
+    margin: 0 30px;
+}
+/* -------------------------------------- Navbar -------------------------------------- */
+
+/* -------------------------------------- Header -------------------------------------- */
+
+header{
+    width: 100vw;
+    height: 100px;
+    background-color: blueviolet;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* margin-bottom: 20px; */
+}
+.hero-content{
+    height: calc(100vh - 100px);
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    color: whitesmoke;
+    text-align: center;
+}
+.hero-content h2 {
+    font-size: 4vmin;
+}
+
+.hero-content h1 {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+/* -------------------------------------- Mobile Menu -------------------------------------- */
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    cursor: pointer; 
+    display: none;
 }

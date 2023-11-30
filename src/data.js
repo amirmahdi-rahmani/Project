@@ -1,27 +1,169 @@
-const azarbaijanData = {
-  name: "azarbaijan",
-  image: "some address",
-  centerCity: "tabriz",
-  sanayedasti: [
+export const menu = [
+  { id: 1, title: "خانه", link: "/" },
+  { id: 3, title: "غذاها", link: "/foods" },
+  { id: 4, title: "مشاهیر", link: "/famous" },
+  { id: 2, title: "مکان های گردشگری", link: "/places" }
+];
+
+
+export const hero={
+  id:1,
+  title:"با آذربایجان شرقی بیشتر آشنا شوید ",
+  linkTitle:"ادامه دهید "
+}
+
+
+{
+  /*
+  
+
+
+const famous = {
+  id: 1,
+  title: "famous",
+  items: [
     {
-      id: "100",
-      name: "farsh bafi",
-      images: [
-        { id: "201", value: "imageAddress" },
-        { id: "202", value: "imageAddress 2" },
-      ],
+      id:1,
+      name:"بابک خرمدین",
+      description,
+      images,
+      link,
     },
-  ],
-  amakendDidani: [
     {
-      id: "300",
-      name: "elgoali",
-      images: [
-        { id: "401", value: "imageAddress" },
-        { id: "402", value: "imageAddress 2" },
-      ],
+      id:2,
+      name:"استاد شهریار",
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
     },
   ],
 };
 
-export default azarbaijanData;
+const foods = {
+  id: 1,
+  title: "foods",
+  items: [
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+  ],
+};
+
+const places = {
+  id: 1,
+  title: "places",
+  items: [
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+    {
+      id,
+      name,
+      description,
+      images,
+      link,
+    },
+  ],
+};
+ */
+}
+export default menu;
