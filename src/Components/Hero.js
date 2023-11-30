@@ -8,7 +8,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${heroImage.src})` }}
     >
       <h1>{hero.title}</h1>
-      <a href="/html#SecFam" class="ctn">
+      <a href="/#SecFam" class="ctn">
         {hero.linkTitle}
       </a>
     </div>
