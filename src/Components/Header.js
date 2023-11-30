@@ -3,22 +3,21 @@ import menu from "@/data";
 const Header = () => {
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
-       <div className="max-w-7xl h-full mx-auto flex justify-between items-center "> 
+      <div className="max-w-7xl h-full mx-auto px-5 flex justify-between items-center ">
+        <h1 className="logo text-3xl text-white ">آذربایجان شرقی</h1>
+        <nav className="navbar hidden md:block">
 
-       <h1 className="logo text-3xl text-white ps-3">آذربایجان شرقی</h1>
-      <nav className="navbar">
-        <ul className="nav-links">
-         { menu.map(item=><li key={item.id}>
-            <a href={item.link}>
-                {item.title}
-                </a>
-          </li>
-          )}
-        </ul>
-      </nav>
-        <img src="/img/menu.png" alt="menu" class="menu-btn" />
-        </div>
-     
+          <ul className="nav-links">
+            {menu.map((item) => (
+              <li key={item.id}>
+                <a href={item.link} className="text-base lg:text-lg inline-block">{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="w-10 aspect-[1/1] bg-white md:hidden  "></div>
+        <img src="/img/menu.png" alt="menu" className="menu-btn" />
+      </div>
     </header>
   );
 };
