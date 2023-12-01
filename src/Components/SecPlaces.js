@@ -13,10 +13,10 @@ const SecPlaces = () => {
         <a href="./Places.js" className="ctn"> ادامه دهید </a>
       </div>
       <div className="grid grid-cols-2 gap-4 ">
-        <div className="w-40 h-40 bg-violet-600"></div>
-        <div className="w-40 h-40 bg-violet-600"></div>
-        <div className="w-40 h-40 bg-violet-600"></div>
-        <div className="w-40 h-40 bg-violet-600"></div>
+        <div className="w-40 h-40 bg-violet-600 hover:scale-105"></div>
+        <div className="w-40 h-40 bg-violet-600 hover:scale-105"></div>
+        <div className="w-40 h-40 bg-violet-600 hover:scale-105"></div>
+        <div className="w-40 h-40 bg-violet-600 hover:scale-105"></div>
         
       </div>
     </div>

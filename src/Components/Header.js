@@ -4,7 +4,11 @@ const Header = () => {
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
       <div className="max-w-7xl h-full mx-auto px-5 flex justify-between items-center ">
-        <h1 className="logo text-3xl text-white ">آذربایجان شرقی</h1>
+        <h1 className="logo text-3xl text-white ">
+        <a href="/">
+          آذربایجان شرقی
+        </a>
+        </h1>
         <nav className="navbar hidden md:block">
 
           <ul className="nav-links">
@@ -18,6 +22,7 @@ const Header = () => {
         <div className="w-10 aspect-[1/1] bg-white md:hidden  "></div>
         <img src="/img/menu.png" alt="menu" className="menu-btn" />
       </div>
+      
     </header>
   );
 };
