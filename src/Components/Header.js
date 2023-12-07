@@ -27,10 +27,13 @@ const Header = () => {
           </ul>
         </nav>
         <div
-          className="w-10 aspect-[1/1] bg-white md:hidden  cursor-pointer"
+          className="w-10 aspect-[1/1] md:hidden  cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <img src="/img/menu.png" alt="menu" className="menu-btn" />
+          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 stroke-white">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+</svg>
+
         </div>
       </div>
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}/>
