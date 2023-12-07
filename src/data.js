@@ -3,6 +3,7 @@ export const menu = [
   { id: 3, title: "غذاها", link: "/foods" },
   { id: 4, title: "مشاهیر", link: "/famous" },
   { id: 2, title: "مکان های گردشگری", link: "/places" },
+  { id: 5, title: "ورود / عضویت", link: "/auth/singIn"}
 ];
 
 export const hero = {
