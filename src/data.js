@@ -1,10 +1,10 @@
-export const menu = [
-  { id: 1, title: "خانه", link: "/" },
-  { id: 3, title: "غذاها", link: "/foods" },
-  { id: 4, title: "مشاهیر", link: "/famous" },
-  { id: 2, title: "مکان های گردشگری", link: "/places" },
-  { id: 5, title: "ورود / عضویت", link: "/auth/singIn"}
-];
+// export const menu = [
+//   { id: 1, title: "خانه", link: "/" },
+//   { id: 3, title: "غذاها", link: "/foods" },
+//   { id: 4, title: "مشاهیر", link: "/famous" },
+//   { id: 2, title: "مکان های گردشگری", link: "/places" },
+//   { id: 5, title: "ورود / عضویت", link: "/auth/singIn"}
+// ];
 
 export const hero = {
   id: 1,
@@ -171,4 +171,4 @@ export const places = {
 };
  
 
-export default menu;
+// export default menu;

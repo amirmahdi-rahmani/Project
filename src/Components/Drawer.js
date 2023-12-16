@@ -1,4 +1,4 @@
-import menu from "@/data"
+// import menu from "@/data"
 import BackDrop from "./BackDrop"
 
 const Drawer = (props) => {
@@ -22,7 +22,7 @@ const Drawer = (props) => {
         </div>
         </div>
         <div className="flex flex-col mt-20 gap-5 justify-center items-center ">
-        {menu.map(item=><li className="list-none text-2xl" key={item.id}>
+        {props.menu.map(item=><li className="list-none text-2xl" key={item.id}>
         <a href={item.link} > {item.title}</a> 
                </li>)}
         </div>

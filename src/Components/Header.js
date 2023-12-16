@@ -1,10 +1,19 @@
 "use client";
-import menu from "@/data";
-import { useState } from "react";
+// import menu from "@/data";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Drawer from "./Drawer";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [menu, setMenu] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5288/api/menu")
+      .then((res) => setMenu(res.data));
+  }, []);
 
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -30,13 +39,10 @@ const Header = () => {
           className="w-10 aspect-[1/1] md:hidden  cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 stroke-white">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-</svg>
-
+          <HamburgerMenu />
         </div>
       </div>
-      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}/>
+      <Drawer isOpen={isOpen} setIsOpen={setIsOpen} menu={menu}/>
     </header>
   );
 };
