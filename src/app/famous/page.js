@@ -1,18 +1,27 @@
-import { famous } from "@/data"
-import Card from "@/Components/Card"
 
-const page = () => {
+import Card from "@/Components/Card";
+import getData from "@/functions/getData";
+
+const Famous = async () => {
+  const famousData = await getData("famous");
+  
   return (
     <div>
-        <h1 className="my-10 text-center text-3xl font-bold">{famous.title}</h1>
+      <h1 className="my-24 text-center text-4xl font-bold">
+      مشاهیر آذربایجان شرقی
+      </h1>
 
-        {famous.items.map(item=><Card
-         key={item.id}
-         title={item.name}
-         description={item.description}
-         btnLink={item.link}
-         />)}
+      {famousData?.map((item) => (
+        <Card
+          key={item.id}
+          name={item.name}
+          description={item.description}
+          imageOne={item.imageOne}
+          imageTwo={item.imageTwo}
+          link={item.link}
+        />
+      ))}
     </div>
-  )
-}
-export default page
+  );
+};
+export default Famous;

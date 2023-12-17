@@ -1,4 +1,3 @@
-// import menu from "@/data"
 import BackDrop from "./BackDrop"
 
 const Drawer = (props) => {

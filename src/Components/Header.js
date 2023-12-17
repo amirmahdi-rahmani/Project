@@ -1,19 +1,10 @@
 "use client";
-// import menu from "@/data";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import Drawer from "./Drawer";
 import HamburgerMenu from "./HamburgerMenu";
 
-const Header = () => {
+const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [menu, setMenu] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:5288/api/menu")
-      .then((res) => setMenu(res.data));
-  }, []);
 
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -42,7 +33,7 @@ const Header = () => {
           <HamburgerMenu />
         </div>
       </div>
-      <Drawer isOpen={isOpen} setIsOpen={setIsOpen} menu={menu}/>
+      <Drawer isOpen={isOpen} setIsOpen={setIsOpen} menu={menu} />
     </header>
   );
 };
