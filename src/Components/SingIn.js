@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SingIn = () => {
   return (
     <div>
@@ -51,13 +53,13 @@ const SingIn = () => {
               </div>
               <p className="text-center text-sm text-gray-500">
                 حساب کاربری ندارید؟
-                <a
-                  href="../auth/singUp"
+                <Link
+                  href="/auth/singUp"
                   className="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none"
                 >
                   {" "}
                   ثبت نام
-                </a>
+                </Link>
                 .
               </p>
             </form>

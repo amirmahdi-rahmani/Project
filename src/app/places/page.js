@@ -7,9 +7,9 @@ const Places = async () => {
   return (
     <div>
       <h1 className="my-10 text-center text-3xl font-bold">
-      جاذبه های گردشگری آذربایجان شرقی
+        {PlacesData.title}
       </h1>
-      {PlacesData?.map((item) => (
+      {PlacesData?.items.map((item) => (
         <Card
           key={item.id}
           name={item.name}

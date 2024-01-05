@@ -8,14 +8,14 @@ import getData from "@/functions/getData";
 const Home = async () => {
   const famousData = await getData("famous");
   const placesData = await getData("secPlaces");
-
+  const foodData = await getData("secFoods");
 
   return (
     <main>
       <Hero />
-    <SecFamous famous={famousData} />
-      <SecFoods />
-      <SecPlaces places={placesData}/>
+      <SecFamous famous={famousData} />
+      <SecFoods foods={foodData} />
+      <SecPlaces places={placesData} />
     </main>
   );
 };

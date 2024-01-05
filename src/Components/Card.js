@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import getImageAddress from "@/functions/getImageAddress";
 
 const Card = ({ name, description, imageOne, imageTwo, link }) => {
@@ -21,9 +22,9 @@ const Card = ({ name, description, imageOne, imageTwo, link }) => {
       </div>
       <p className="py-10 text-2xl font-bolder ">{name}</p>
       <p className="py-10 text-justify ">{description}</p>
-      <a href={link} className="block md:inline-block ctn text-center">
+      <Link href={link} className="block md:inline-block ctn text-center">
         بیشتر بدانید
-      </a>
+      </Link>
     </section>
   );
 };
