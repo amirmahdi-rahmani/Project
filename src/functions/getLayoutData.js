@@ -1,5 +1,5 @@
 const getLayoutData = async () => {
-  const res = await fetch(`http://localhost:5288/api/menu`);
+  const res = await fetch(`https://az.pythonanywhere.com`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

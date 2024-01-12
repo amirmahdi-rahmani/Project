@@ -18,9 +18,8 @@ const SingUp = () => {
       name: data.name,
     };
     console.log(body);
-    ax.post("/signup", body);
+    ax.post("/register", body);
 
-    // fetch()
   };
   return (
     <div>

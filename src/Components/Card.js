@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import getImageAddress from "@/functions/getImageAddress";
 
 const Card = ({ name, description, imageOne, imageTwo, link }) => {
   return (
@@ -8,14 +7,14 @@ const Card = ({ name, description, imageOne, imageTwo, link }) => {
         <div className="aspect-square w-full ">
           <img
             className="w-full h-full rounded-xl shadow-xl  border-solid border-4 border-violet-600"
-            src={getImageAddress(imageOne)}
+            src={imageOne}
             alt="imageOne"
           />
         </div>
         <div className="aspect-square w-full  hidden lg:block">
           <img
             className="w-full h-full rounded-xl shadow-xl border-solid border-4 border-violet-600"
-            src={getImageAddress(imageTwo)}
+            src={imageTwo}
             alt="imageTwo"
           />
         </div>

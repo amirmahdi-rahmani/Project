@@ -36,10 +36,11 @@ const Drawer = (props) => {
         <div className="flex flex-col mt-20 gap-5 justify-center items-center ">
           {props.menu.map((item) => (
             <li className="list-none text-2xl" key={item.id}>
-              <Link href={item.link}> {item.title}</Link>
+              <Link href={item.slug}> {item.title}</Link>
             </li>
           ))}
         </div>
+        
       </div>
     </>
   );

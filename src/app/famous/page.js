@@ -7,16 +7,15 @@ const Famous = async () => {
   return (
     <div>
       <h1 className="my-24 text-center text-4xl font-bold">
-        {famousData.title}
+      مشاهیر آذربایجان شرقی
       </h1>
-
-      {famousData?.items.map((item) => (
+      {famousData?.map((item) => (
         <Card
           key={item.id}
           name={item.name}
           description={item.description}
-          imageOne={item.imageOne}
-          imageTwo={item.imageTwo}
+          imageOne={item.images[0]}
+          imageTwo={item.images[1]}
           link={item.link}
         />
       ))}

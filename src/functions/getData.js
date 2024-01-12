@@ -1,7 +1,7 @@
 
 const getData = async (endpoint) => {
 
-    const res = await fetch(`http://localhost:5288/api/${endpoint}`);
+    const res = await fetch(`https://az.pythonanywhere.com/${endpoint}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

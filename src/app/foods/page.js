@@ -5,17 +5,16 @@ const Foods = async () => {
   const foodsData = await getData("foods");
   return (
     <div>
-      <h1 className="my-10 text-center text-3xl font-bold">
-        {foodsData.title}
+      <h1 className="my-24 text-center text-4xl font-bold">
+      معروف ترین غذا های استان آذربایجان شرقی
       </h1>
-
-      {foodsData?.items.map((item) => (
+      {foodsData?.map((item) => (
         <Card
           key={item.id}
           name={item.name}
           description={item.description}
-          imageOne={item.imageOne}
-          imageTwo={item.imageTwo}
+          imageOne={item.images[0]}
+          imageTwo={item.images[1]}
           link={item.link}
         />
       ))}

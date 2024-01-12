@@ -7,8 +7,8 @@ import getData from "@/functions/getData";
 
 const Home = async () => {
   const famousData = await getData("famous");
-  const placesData = await getData("secPlaces");
-  const foodData = await getData("secFoods");
+  const placesData = await getData("places");
+  const foodData = await getData("foods");
 
   return (
     <main>

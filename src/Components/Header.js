@@ -6,6 +6,7 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogIn, setIsLogin] = useState(false);
 
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -18,7 +19,7 @@ const Header = ({ menu }) => {
             {menu.map((item) => (
               <li key={item.id}>
                 <Link
-                  href={item.link}
+                  href={item.slug}
                   className="text-base lg:text-lg inline-block"
                 >
                   {item.title}
@@ -27,6 +28,18 @@ const Header = ({ menu }) => {
             ))}
           </ul>
         </nav>
+        <div onClick={() => setIsLogin((prev) => !prev)}>change mod</div>
+        {isLogIn ? (
+          <div>Amirmahdi</div>
+        ) : (
+          <a
+            href={isLogIn ? "" : "/auth/singIn"}
+            className="ms-auto md:ms-0 px-4 block text-white font-bold text-lg"
+          >
+            ورود
+          </a>
+        )}
+
         <div
           className="w-10 aspect-[1/1] md:hidden  cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
