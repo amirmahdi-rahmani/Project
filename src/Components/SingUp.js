@@ -13,13 +13,12 @@ const SingUp = () => {
 
   const onSubmit = (data) => {
     const body = {
-      email: data.email,
+      // email: data.email,
       password: data.password,
-      name: data.name,
+      username: data.name,
     };
     console.log(body);
-    ax.post("/register", body);
-
+    ax.post("/register/", body);
   };
   return (
     <div>
@@ -39,7 +38,7 @@ const SingUp = () => {
                   id="name"
                   placeholder="User Name"
                   className="peer mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none"
-                  autocomplete="NA"
+                  autoComplete="NA"
                 />
                 <label
                   htmlFor="name"
@@ -48,7 +47,7 @@ const SingUp = () => {
                   User Name
                 </label>
               </div>
-              <div className="relative mt-6">
+              {/* <div className="relative mt-6">
                 <input
                   // type="email"
                   {...register("email", {
@@ -73,7 +72,7 @@ const SingUp = () => {
                 >
                   Email Address
                 </label>
-              </div>
+              </div> */}
               {errors.email && (
                 <p className="text-red-400 text-xs">{errors.email.message}</p>
               )}

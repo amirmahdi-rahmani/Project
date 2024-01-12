@@ -1,9 +1,12 @@
 "use client";
 import ax from "@/functions/axiosInstance";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 const SingIn = () => {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -17,7 +20,11 @@ const SingIn = () => {
       username: data.username,
     };
     console.log(body);
-    ax.post("/login", body);
+    ax.post("/login/", body)
+      .then((res) => {
+        router.push("/");
+      })
+      .catch((er) => console.log("error"));
   };
 
   return (
@@ -38,7 +45,7 @@ const SingIn = () => {
                   id="username"
                   placeholder="User Name"
                   className="peer mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none"
-                  autocomplete="NA"
+                  autoComplete="NA"
                 />
                 <label
                   htmlFor="name"

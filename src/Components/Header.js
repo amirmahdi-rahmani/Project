@@ -1,12 +1,31 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Drawer from "./Drawer";
 import HamburgerMenu from "./HamburgerMenu";
+import ax from "@/functions/axiosInstance";
+import ArrowDown from "@/Svgs/ArrowDown";
 
 const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogIn, setIsLogin] = useState(false);
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    ax.get("/me/", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    })
+      .then((res) => {
+        setIsLogin(true);
+        setUserName(res.data.username);
+      })
+      .catch((er) => console.log(er));
+  }, []);
+
+  const logout = () => {};
 
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -30,7 +49,13 @@ const Header = ({ menu }) => {
         </nav>
         <div onClick={() => setIsLogin((prev) => !prev)}>change mod</div>
         {isLogIn ? (
-          <div>Amirmahdi</div>
+          <div className="flex items-center gap-1 justify-center group relative">
+            <span>{userName}</span>
+            <ArrowDown className="w-5 fill-black" />
+            <div className="absolute top-0 start-0 w-fit h-[200px] py-2 px-4 hidden group-hover:block">
+              <button onClick={logout}>خروج</button>
+            </div>
+          </div>
         ) : (
           <a
             href={isLogIn ? "" : "/auth/singIn"}
