@@ -47,7 +47,6 @@ const Header = ({ menu }) => {
             ))}
           </ul>
         </nav>
-        <div onClick={() => setIsLogin((prev) => !prev)}>change mod</div>
         {isLogIn ? (
           <div className="flex items-center gap-1 justify-center group relative">
             <span>{userName}</span>
