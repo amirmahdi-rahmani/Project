@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Drawer from "./Drawer";
 import HamburgerMenu from "./HamburgerMenu";
 import ax from "@/functions/axiosInstance";
@@ -10,6 +11,8 @@ const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogIn, setIsLogin] = useState(false);
   const [userName, setUserName] = useState();
+
+  const pathname = usePathname();
 
   useEffect(() => {
     ax.get("/me/", {
@@ -22,7 +25,7 @@ const Header = ({ menu }) => {
         setUserName(res.data.username);
       })
       .catch((er) => console.log(er));
-  }, []);
+  }, [pathname]);
 
   const logout = () => {
     ax.get("/logout/")
@@ -57,7 +60,7 @@ const Header = ({ menu }) => {
           <div className="flex items-center gap-1 justify-center group relative ms-auto md:ms-0 px-4 text-white font-bold text-lg">
             <span>{userName}</span>
             <ArrowDown className="w-5 fill-black" />
-            <div className="absolute top-0 start-0 w-fit h-[200px] py-2 px-4 hidden group-hover:block">
+            <div className="absolute top-7 rounded-md start-0 w-fit min-w-full h-[50px] py-2 px-4 hidden group-hover:block bg-white text-sm hover:text-red-600 duration-300 shadow border text-red-300 ">
               <button onClick={logout}>خروج</button>
             </div>
           </div>
