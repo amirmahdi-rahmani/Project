@@ -16,7 +16,6 @@ const Header = ({ menu }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      withCredentials: true,
     })
       .then((res) => {
         setIsLogin(true);
@@ -25,7 +24,14 @@ const Header = ({ menu }) => {
       .catch((er) => console.log(er));
   }, []);
 
-  const logout = () => {};
+  const logout = () => {
+    ax.get("/logout/")
+      .then((res) => {
+        setIsLogin(false);
+        setUserName("");
+      })
+      .catch((er) => console.log("error while deleting cookie", er));
+  };
 
   return (
     <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -48,7 +54,7 @@ const Header = ({ menu }) => {
           </ul>
         </nav>
         {isLogIn ? (
-          <div className="flex items-center gap-1 justify-center group relative">
+          <div className="flex items-center gap-1 justify-center group relative ms-auto md:ms-0 px-4 text-white font-bold text-lg">
             <span>{userName}</span>
             <ArrowDown className="w-5 fill-black" />
             <div className="absolute top-0 start-0 w-fit h-[200px] py-2 px-4 hidden group-hover:block">
