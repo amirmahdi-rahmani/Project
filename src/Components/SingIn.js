@@ -2,10 +2,12 @@
 import ax from "@/functions/axiosInstance";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const SingIn = () => {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     register,
@@ -19,12 +21,13 @@ const SingIn = () => {
       password: data.password,
       username: data.username,
     };
-    console.log(body);
+    setIsLoading(true);
     ax.post("/login/", body)
       .then((res) => {
         router.push("/");
       })
-      .catch((er) => console.log("error"));
+      .catch((er) => alert("اطلاعات وارد شده صحیح نیست"))
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -77,9 +80,10 @@ const SingIn = () => {
               <div className="my-6">
                 <button
                   type="submit"
+                  disabled={isLoading}
                   className="w-full rounded-md bg-blue-700 px-3 py-4 text-white focus:bg-gray-600 focus:outline-none"
                 >
-                  Sign in
+                  {isLoading ? <span> loading </span> : "Sign in"}
                 </button>
               </div>
               <p className="text-center text-sm text-gray-500">

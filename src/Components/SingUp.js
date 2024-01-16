@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import ax from "@/functions/axiosInstance";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const SingUp = () => {
@@ -10,6 +11,7 @@ const SingUp = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = (data) => {
     const body = {
@@ -17,8 +19,13 @@ const SingUp = () => {
       password: data.password,
       username: data.name,
     };
-    console.log(body);
-    ax.post("/register/", body);
+    setIsLoading(true);
+    ax.post("/register/", body)
+      .then((res) => {
+        router.push("/");
+      })
+      .catch((er) => alert("کاربر از قبل وجود دارد"))
+      .finally(() => setIsLoading(false));
   };
   return (
     <div>
@@ -47,32 +54,7 @@ const SingUp = () => {
                   User Name
                 </label>
               </div>
-              {/* <div className="relative mt-6">
-                <input
-                  // type="email"
-                  {...register("email", {
-                    required: {
-                      value: true,
-                      message: "این فیلد اجباری است",
-                    },
-                    validate: {
-                      matchPattern: (v) =>
-                        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
-                        "آدرس ایمیل صحیح نیست!",
-                    },
-                  })}
-                  id="email"
-                  placeholder="Email Address"
-                  className="peer mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none"
-                  autocomplete="NA"
-                />
-                <label
-                  htmlFor="email"
-                  className="pointer-events-none absolute top-0 left-0 origin-left -translate-y-1/2 transform text-sm text-gray-800 opacity-75 transition-all duration-100 ease-in-out peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:pl-0 peer-focus:text-sm peer-focus:text-gray-800"
-                >
-                  Email Address
-                </label>
-              </div> */}
+
               {errors.email && (
                 <p className="text-red-400 text-xs">{errors.email.message}</p>
               )}
@@ -104,9 +86,10 @@ const SingUp = () => {
               <div className="my-6">
                 <button
                   type="submit"
+                  disabled={isLoading}
                   className="w-full rounded-md bg-blue-700 px-3 py-4 text-white focus:bg-gray-600 focus:outline-none"
                 >
-                  Sign up
+                  {isLoading ? <span> loading </span> : "Sign up"}
                 </button>
               </div>
               <p className="text-center text-sm text-gray-500">
