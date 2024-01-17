@@ -59,7 +59,7 @@ const Header = ({ menu }) => {
         {isLogIn ? (
           <div className="flex items-center gap-1 justify-center group relative ms-auto md:ms-0 px-4 text-white font-bold text-lg">
             <span>{userName}</span>
-            <ArrowDown className="w-5 fill-black" />
+            <ArrowDown className="w-5 fill-white" />
             <div className="absolute top-7 rounded-md start-0 w-fit min-w-full h-[50px] py-2 px-4 hidden group-hover:block bg-white text-sm hover:text-red-600 duration-300 shadow border text-red-300 ">
               <button onClick={logout}>خروج</button>
             </div>
