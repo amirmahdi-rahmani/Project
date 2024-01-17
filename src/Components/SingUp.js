@@ -24,7 +24,6 @@ const SingUp = () => {
     setIsLoading(true);
     ax.post("/register/", body)
       .then((res) => {
-        console.log(response);
         router.push("/");
       })
       .catch((er) => alert("کاربر از قبل وجود دارد"))
