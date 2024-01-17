@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import ax from "@/functions/axiosInstance";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -11,6 +12,7 @@ const SingUp = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = (data) => {
@@ -22,6 +24,7 @@ const SingUp = () => {
     setIsLoading(true);
     ax.post("/register/", body)
       .then((res) => {
+        console.log(response);
         router.push("/");
       })
       .catch((er) => alert("کاربر از قبل وجود دارد"))
