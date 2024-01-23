@@ -5,7 +5,7 @@ const SecPlaces = ({ places }) => {
   places.map((item) => images.push(...item.images));
   return (
     <div className="max-w-7xl gap-10 py-10 px-5 h-1/2 mx-auto flex  flex-col lg:flex-row items-center justify-between ">
-      <div className="flex flex-col items-center">
+      <div className="flex w-1/2 flex-col items-center">
         <h2 className="text-3xl py-4  font-bold">
           جاذبه های گردشگری در آذربایجان شرقی
         </h2>
@@ -19,10 +19,10 @@ const SecPlaces = ({ places }) => {
           ادامه دهید
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-4 min-w-fit">
+      <div className="grid grid-cols-2 w-1/2 gap-4 ">
         
         {images.slice(0, 4).map((image) => (
-          <div key={image} className="w-60 h-60 hover:scale-105 duration-300 ">
+          <div key={image} className="max-w-60 aspect-square w-full  hover:scale-105 duration-300 ">
             <img src={image} alt="" className="rounded-xl shadow-xl" />
           </div>
         ))}

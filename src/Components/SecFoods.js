@@ -15,11 +15,11 @@ const SecFoods = ({ foods }) => {
           غذا های استان آذربایجان شرقی
         </h2>
         <p className="max-w-md text-white  my-10 ">تبریز مرکز استان آذربایجان شرقی، یکی از بزرگترین شهر های ایران است که دارای غذاهای محلی لذیذ و محبوبی مانند کوفته تبریزی، کوکوی لوبیا سبز، آش ماست، دلمه برگ مو، آش میوه، آش آبغوره و … می باشد.</p>
-        <div className="px-40">
-          <Link href="/foods" className="ctn">
+        
+          <Link href="/foods" className="ctn w-fit">
             ادامه دهید
           </Link>
-        </div>
+        
       </div>
     </div>
   );
