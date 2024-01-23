@@ -15,6 +15,7 @@ const Header = ({ menu }) => {
   const pathname = usePathname();
 
   useEffect(() => {
+    setIsOpen(false)
     ax.get("/me/", {
       headers: {
         "Content-Type": "application/json",
