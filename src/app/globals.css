@@ -2,33 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 html {
     direction: rtl;
     scroll-behavior: smooth;
 }
-a {
-    text-decoration: none;
-}
-ul{
-    list-style: none;
-}
+
 ul li a{
     font-size: 22px;
     color: whitesmoke;
     
 }
-
-body , html {
-    overflow-x: hidden;
-}
 ul li a:hover{
     color: white;
-    
 }
 .btn {
     padding: 8px 15px;

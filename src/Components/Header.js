@@ -66,12 +66,12 @@ const Header = ({ menu }) => {
             </div>
           </div>
         ) : (
-          <a
-            href={isLogIn ? "" : "/auth/singIn"}
+          <Link
+            href={"/auth/singIn"}
             className="ms-auto md:ms-0 px-4 block text-white font-bold text-lg"
           >
             ورود
-          </a>
+          </Link>
         )}
 
         <div

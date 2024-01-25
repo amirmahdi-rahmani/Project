@@ -1,7 +1,7 @@
 import Link from "next/link";
 import foodImage from "../images/Dolma2.jpg";
 
-const SecFoods = ({ foods }) => {
+const SecFoods = () => {
   return (
     <div className="py-10 flex justify-between h-screen relative z-20">
       <img

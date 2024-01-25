@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { hero } from "@/data";
 import heroImage from "../images/El-Goli.jpg";
 
 const Hero = () => {
@@ -9,10 +8,10 @@ const Hero = () => {
       style={{ backgroundImage: `url(${heroImage.src})` }}
     >
       <h1 className="w-fit p-2 bg-violet-800/30 rounded-lg backdrop-blur-md text-2xl sm:text-5xl text-white mt-8">
-        {hero.title}
+        با آذربایجان شرقی بیشتر آشنا شوید
       </h1>
       <Link href="/#SecFam" className="btn">
-        {hero.linkTitle}
+        ادامه دهید
       </Link>
     </div>
   );

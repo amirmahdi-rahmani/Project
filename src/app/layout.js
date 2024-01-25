@@ -14,7 +14,7 @@ export const metadata = {
 const RootLayout = async ({ children }) => {
   const menu = await getLayoutData();
   return (
-    <html lang="en">
+    <html>
       <body className={inter.className}>
         <Header menu={menu} />
         {children}

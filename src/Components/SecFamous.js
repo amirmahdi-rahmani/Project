@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const SecFamous = ({ famous }) => {
+
   return (
     <section id="SecFam" className="text-center max-w-7xl mx-auto px-4 my-10">
       <h2
@@ -20,7 +21,7 @@ const SecFamous = ({ famous }) => {
 
        "
       >
-        {famous.slice(0, 2).map((val) => (
+        {famous.slice(0,2).map((val) => (
           <div key={val.id} className="text-center flex flex-col items-center ">
             <img
               className="w-96 h-96 rounded-xl  shadow-2xl border-solid border-4 border-violet-600"
