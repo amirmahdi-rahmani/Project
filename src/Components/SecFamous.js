@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const SecFamous = ({ famous }) => {
   return (
@@ -29,7 +29,7 @@ const SecFamous = ({ famous }) => {
             />
             <h4 className="text-center my-10 text-2xl ">{val.name} </h4>
             <p className="line-clamp-4">{val.description}</p>
-            <Link href="/famous" className="ctn my-4 block md:inline-block ">
+            <Link href="/famous" className="btn my-4 block md:inline-block ">
               بیشتر بدانید
             </Link>
           </div>

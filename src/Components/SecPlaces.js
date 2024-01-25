@@ -15,14 +15,16 @@ const SecPlaces = ({ places }) => {
           جذابیت‌های این استان زیبا افزوده است. اگر قصد سر زدن به استان
           آذربایجان شرقی دارید، باید لیست بلندبالایی از مراکز دیدنی تهیه کنید..
         </p>
-        <Link href="/places" className="ctn text-center">
+        <Link href="/places" className="btn text-center">
           ادامه دهید
         </Link>
       </div>
       <div className="grid grid-cols-2 w-1/2 gap-4 ">
-        
         {images.slice(0, 4).map((image) => (
-          <div key={image} className="max-w-60 aspect-square w-full  hover:scale-105 duration-300 ">
+          <div
+            key={image}
+            className="max-w-60 aspect-square w-full  hover:scale-105 duration-300 "
+          >
             <img src={image} alt="" className="rounded-xl shadow-xl" />
           </div>
         ))}

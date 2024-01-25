@@ -15,7 +15,7 @@ const Header = ({ menu }) => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setIsOpen(false)
+    setIsOpen(false);
     ax.get("/me/", {
       headers: {
         "Content-Type": "application/json",
@@ -38,15 +38,15 @@ const Header = ({ menu }) => {
   };
 
   return (
-    <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <header className="block bg-gradient-to-r from-violet-500 to-fuchsia-500 py-6">
       <div className="max-w-7xl h-full mx-auto px-5 flex justify-between items-center ">
         <h1 className="logo text-3xl text-white ">
           <Link href="/">آذربایجان شرقی</Link>
         </h1>
-        <nav className="navbar hidden md:block">
-          <ul className="nav-links">
+        <nav className=" hidden md:block">
+          <ul className="flex item-center">
             {menu.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} className="mx-6">
                 <Link
                   href={item.slug}
                   className="text-base lg:text-lg inline-block"
