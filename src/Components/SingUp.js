@@ -17,7 +17,6 @@ const SingUp = () => {
 
   const onSubmit = (data) => {
     const body = {
-      // email: data.email,
       password: data.password,
       username: data.name,
     };
@@ -56,10 +55,6 @@ const SingUp = () => {
                   User Name
                 </label>
               </div>
-
-              {errors.email && (
-                <p className="text-red-400 text-xs">{errors.email.message}</p>
-              )}
               <div className="relative mt-6">
                 <input
                   type="password"

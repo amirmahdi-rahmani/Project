@@ -16,11 +16,7 @@ const Header = ({ menu }) => {
 
   useEffect(() => {
     setIsOpen(false);
-    ax.get("/me/", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    ax.get("/me/")
       .then((res) => {
         setIsLogin(true);
         setUserName(res.data.username);
