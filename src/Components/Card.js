@@ -4,16 +4,16 @@ const Card = ({ name, description, imageOne, imageTwo, link }) => {
   return (
     <section className="max-w-7xl mx-auto px-5 my-10 flex flex-col items-center">
       <div className="w-full grid gap-10 grid-cols-1 lg:grid-cols-2 max-w-2xl mx-auto">
-        <div className="aspect-square w-full ">
+        <div className="aspect-square w-full rounded-xl shadow-xl  border-solid border-4 border-violet-600 overflow-hidden">
           <img
-            className="w-full h-full rounded-xl shadow-xl  border-solid border-4 border-violet-600"
+            className="w-full h-full hover:scale-110 duration-300"
             src={imageOne}
             alt="imageOne"
           />
         </div>
-        <div className="aspect-square w-full  hidden lg:block">
+        <div className="aspect-square w-full hidden lg:block rounded-xl shadow-xl border-solid border-4 border-violet-600 overflow-hidden">
           <img
-            className="w-full h-full rounded-xl shadow-xl border-solid border-4 border-violet-600"
+            className="w-full h-full hover:scale-110 duration-300"
             src={imageTwo}
             alt="imageTwo"
           />

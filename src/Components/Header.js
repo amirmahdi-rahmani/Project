@@ -44,7 +44,7 @@ const Header = ({ menu }) => {
             {menu.map((item) => (
               <li key={item.id} className="mx-6">
                 <Link
-                  href={item.slug}
+                  href={`/${item.slug}`}
                   className="text-base lg:text-lg inline-block"
                 >
                   {item.title}

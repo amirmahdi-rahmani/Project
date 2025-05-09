@@ -11,12 +11,12 @@ const Footer = () => {
     flex-col
     py-5
     ">
-        <p className="text-white">
-            امیر مهدی رحمانی ، دانشکده فنی و حرفه ای شهید بهشتی ، پروژه کاردانی ، سال 1402
-        </p>
-        <p className="text-white">
-            CopyRight © کپی رایت
-        </p>
+      <p className="text-white">
+        امیر مهدی رحمانی ، دانشکده فنی و حرفه ای شهید بهشتی ،  سال 1404
+      </p>
+      <p className="text-white">
+        CopyRight © کپی رایت
+      </p>
     </div>
   )
 }
